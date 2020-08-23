@@ -56,7 +56,7 @@ public Text JumpText;
             }
             if(speed <= 0) {
                 this.transform.position = startpos;
-                speed = 10;
+                speed = INITIAL_SPEED;
             }
         playerAnimation.SetFloat("Movemnt", Mathf.Abs(rigidBody.velocity.x));
         playerAnimation.SetBool("OnGround", PlayerGround());
@@ -73,7 +73,7 @@ public Text JumpText;
            }
         void OnCollisionEnter2D(Collision2D other) {
             if(other.gameObject.tag == "Enemy" && other.gameObject.transform.GetChild(0).tag == "Enemy_Hitbox"&& PlayerGround()== false) {
-                Debug.Log("jumpted on ya");
+                //Debug.Log("jumpted on ya");
                rigidBody.velocity = new Vector2(rigidBody.velocity.x, 7f);
                health.health += 10;
                speed = INITIAL_SPEED;

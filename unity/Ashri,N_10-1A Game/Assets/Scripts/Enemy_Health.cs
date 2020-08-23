@@ -6,11 +6,14 @@ using UnityEngine.SceneManagement;
 public class Enemy_Health : MonoBehaviour
 {
     public float Enemy_health;
+    public Transform transform_pos;
+    public Playable_character_movement other;
+    private bool IsPlayerGround;
 
     void Start()
     {
-        Enemy_health = 3;       
-    }
+        Enemy_health = 3;
+     }
 
     // Update is called once per frame
     void FixedUpdate()
@@ -21,7 +24,8 @@ public class Enemy_Health : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D other) {
-            if(other.gameObject.tag == "Character"){
+            if(other.gameObject.tag == "Character")
+        {
                 Enemy_health -= 1 ;
                 Debug.Log("Enemy: " + Enemy_health);
             }
