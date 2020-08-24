@@ -9,10 +9,12 @@ public class Enemy_Health : MonoBehaviour
     public Transform transform_pos;
     public Playable_character_movement other;
     private bool IsPlayerGround;
+    public GameObject Player;
 
     void Start()
     {
-        Enemy_health = 3;
+        Enemy_health = 1;
+     //   IsPlayerGround = Turrent_Enemy.GetComponent<Playable_character_movement>().PlayerGround();
      }
 
     // Update is called once per frame
@@ -24,7 +26,7 @@ public class Enemy_Health : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D other) {
-            if(other.gameObject.tag == "Character")
+            if(other.gameObject.tag == "Character" && transform_pos.position.y - 3f > this.transform.position.y)
         {
                 Enemy_health -= 1 ;
                 Debug.Log("Enemy: " + Enemy_health);

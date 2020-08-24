@@ -30,7 +30,9 @@ public class Health : MonoBehaviour
             if(other.gameObject.tag == "Enemy"){
                 health -= 10 ;
                 Debug.Log("Player: " + health);
-            }
-      } 
+            //rigidbody.Addforce(new Vector2(this.gameObject.transform.position.x - 100f, this.gameObject.transform.position.y + 100f));
+            //Debug.Log(this.gameObject.transform);
+        }
+    } 
 
 }

@@ -12,8 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c71292c735b9bb48849bb9ea6f8d23d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  left_max: 33
-  right_max: 64
   enemy_speed: 4
 --- !u!68 &1897581275
 EdgeCollider2D:
@@ -43,8 +41,19 @@ PrefabInstance:
     - target: {fileID: 1122276504694861330, guid: eafb4a51bf5eb934db176f1058c2726f,
         type: 3}
       propertyPath: m_Name
-      value: Turrent_Enemy
+      value: Turrent_Enemy Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 1122276504694861340, guid: eafb4a51bf5eb934db176f1058c2726f,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1122276504694861341, guid: eafb4a51bf5eb934db176f1058c2726f,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7d2f186d51f4b488d813112ca0e3ccb1,
+        type: 3}
     - target: {fileID: 1122276504694861342, guid: eafb4a51bf5eb934db176f1058c2726f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -115,11 +124,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 1122276504694861341, guid: eafb4a51bf5eb934db176f1058c2726f,
+    - target: {fileID: 1122276504694861336, guid: eafb4a51bf5eb934db176f1058c2726f,
         type: 3}
-      propertyPath: m_Sprite
+      propertyPath: transform_pos
       value: 
-      objectReference: {fileID: 21300000, guid: 7d2f186d51f4b488d813112ca0e3ccb1,
+      objectReference: {fileID: 6211470607454497981, guid: 074a65d1d06132746b451b081dafc779,
         type: 3}
     - target: {fileID: 1122276504694861331, guid: eafb4a51bf5eb934db176f1058c2726f,
         type: 3}
@@ -170,11 +179,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.x
       value: 0.62358946
-      objectReference: {fileID: 0}
-    - target: {fileID: 1122276504694861340, guid: eafb4a51bf5eb934db176f1058c2726f,
-        type: 3}
-      propertyPath: m_GravityScale
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1122276504210431859, guid: eafb4a51bf5eb934db176f1058c2726f, type: 3}
