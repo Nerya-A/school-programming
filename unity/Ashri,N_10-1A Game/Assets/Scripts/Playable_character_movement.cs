@@ -14,7 +14,7 @@ private Vector2 startpos;
 public LayerMask groundLayer;
 private PolygonCollider2D PolyCollider;
 private Health health;
-private const float INITIAL_SPEED = 16f;
+private const float INITIAL_SPEED = 20f;
 private Animator playerAnimation;
 //private enum State {idle, running, jumping, falling};
 //private State state = State.idle; 
@@ -27,7 +27,7 @@ public Text JumpText;
      rigidBody = GetComponent<Rigidbody2D>();
      speed = INITIAL_SPEED;
      motion = 0f;
-     jump_speed = 5f;   
+     jump_speed = 50f;   
      startpos = this.transform.position;
      PolyCollider = transform.GetComponent<PolygonCollider2D>();
      playerAnimation = GetComponent<Animator>();
@@ -52,8 +52,9 @@ public Text JumpText;
             transform.localScale = new Vector2(8.625046f, 9.756044f);
             }
             if(PlayerGround() && Input.GetButtonDown("Jump")) {
-                rigidBody.velocity = new Vector2(rigidBody.velocity.x,Mathf.Abs(motion/2)*jump_speed+5f);
-            }
+                rigidBody.velocity = new Vector2(rigidBody.velocity.x,Mathf.Abs(motion/2)*jump_speed+10f);
+                speed -= 4.0f;
+        }
             if(speed <= 0) {
                 this.transform.position = startpos;
                 speed = INITIAL_SPEED;
@@ -62,9 +63,9 @@ public Text JumpText;
         playerAnimation.SetBool("OnGround", PlayerGround());
         playerAnimation.SetFloat("Speed2", speed);
     }
-        void OnTriggerEnter2D(Collider2D Tilemap) {
-            speed -= 0.5f;
-        }
+        //void OnTriggerEnter2D(Collider2D Tilemap) {
+          //  speed -= 2.0f;
+       // }
         private bool PlayerGround() {
             RaycastHit2D raycastHit2D = Physics2D.BoxCast(PolyCollider.bounds.center, PolyCollider.bounds.size, 0f, Vector2.down, .1f, groundLayer);
                          
