@@ -13,7 +13,7 @@ public class Health : MonoBehaviour
 
     void Start()
     {
-        health = 100;
+        health = 50;
         rigidBody = GetComponent<Rigidbody2D>();
     }
 

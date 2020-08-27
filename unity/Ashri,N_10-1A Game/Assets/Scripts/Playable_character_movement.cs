@@ -75,7 +75,7 @@ public Text JumpText;
         void OnCollisionEnter2D(Collision2D other) {
             if(other.gameObject.tag == "Enemy" && other.gameObject.transform.GetChild(0).tag == "Enemy_Hitbox"&& PlayerGround()== false) {
                 //Debug.Log("jumpted on ya");
-               rigidBody.velocity = new Vector2(rigidBody.velocity.x, 7f);
+               rigidBody.velocity = new Vector2(rigidBody.velocity.x, 15f);
                health.health += 10;
                speed = INITIAL_SPEED;
             }

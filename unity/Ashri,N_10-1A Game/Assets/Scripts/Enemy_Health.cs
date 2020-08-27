@@ -10,11 +10,13 @@ public class Enemy_Health : MonoBehaviour
     public Playable_character_movement other;
     private bool IsPlayerGround;
     public GameObject Player;
+    private Animator EnemyHPAnimator;
 
     void Start()
     {
-        Enemy_health = 1;
-     //   IsPlayerGround = Turrent_Enemy.GetComponent<Playable_character_movement>().PlayerGround();
+        Enemy_health = 3;
+        //   IsPlayerGround = Turrent_Enemy.GetComponent<Playable_character_movement>().PlayerGround();
+        EnemyHPAnimator = gameObject.GetComponent<Animator>();
      }
 
     // Update is called once per frame
@@ -23,6 +25,7 @@ public class Enemy_Health : MonoBehaviour
         if(Enemy_health<=0) {
             Destroy(this.gameObject);
         }
+        EnemyHPAnimator.SetFloat("health", Enemy_health);
     }
 
     void OnCollisionEnter2D(Collision2D other) {

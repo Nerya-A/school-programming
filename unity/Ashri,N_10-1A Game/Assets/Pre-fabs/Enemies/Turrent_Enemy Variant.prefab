@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &1263990032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5868002779210513022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c71292c735b9bb48849bb9ea6f8d23d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy_speed: 4
 --- !u!95 &1994641433605391968
 Animator:
   serializedVersion: 3
@@ -32,6 +19,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1263990032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5868002779210513022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c71292c735b9bb48849bb9ea6f8d23d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy_speed: 4
 --- !u!68 &1897581275
 EdgeCollider2D:
   m_ObjectHideFlags: 0

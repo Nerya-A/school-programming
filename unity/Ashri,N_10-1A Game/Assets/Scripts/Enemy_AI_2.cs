@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_AI : MonoBehaviour
+public class Enemy_AI_2 : MonoBehaviour
 {
     //boundaries for enemy movement
     private float left_max;
@@ -12,10 +12,9 @@ public class Enemy_AI : MonoBehaviour
     //movement components
     private Collider2D cld;
     private Rigidbody2D rb;
-    private Animator EnemyAnimation;
     private bool checkMotion;
 
-     void Start()
+    void Start()
     {
         cld = GetComponent<Collider2D>();
         rb = GetComponent<Rigidbody2D>();
@@ -24,21 +23,20 @@ public class Enemy_AI : MonoBehaviour
         right_max = transform.position.x + 8f;
         // remove to make custom patrols (need to public left & right max
         enemy_speed = 6f;
-        EnemyAnimation = gameObject.GetComponent<Animator>();
         checkMotion = false;
 
-        
+
     }
     //EnemyAnimation.SetFloat("Movemnt", Mathf.Abs(rigidBody.velocity.x));
     private void FixedUpdate()
     {
-        if(facing_left)
+        if (facing_left)
         {
-            if(transform.position.x > left_max)
+            if (transform.position.x > left_max)
             {
-                if(transform.localScale.x != 10)
+                if (transform.localScale.x != 7)
                 {
-                    transform.localScale = new Vector3(10, 10);
+                    transform.localScale = new Vector3(7, 7);
                 }
 
                 rb.velocity = new Vector2(-enemy_speed, rb.velocity.y);
@@ -48,22 +46,22 @@ public class Enemy_AI : MonoBehaviour
                 facing_left = false;
             }
         }
-          else
-          {
-            if(transform.position.x < right_max)
+        else
+        {
+            if (transform.position.x < right_max)
             {
-                if(transform.localScale.x != -10)
+                if (transform.localScale.x != -10)
                 {
-                    transform.localScale = new Vector3(-10, 10);
+                    transform.localScale = new Vector3(-7, 7);
                 }
 
                 rb.velocity = new Vector2(enemy_speed, rb.velocity.y);
             }
-            if(transform.position.x >= right_max)
+            if (transform.position.x >= right_max)
             {
                 facing_left = true;
             }
-          }
+        }
 
         if (rb.velocity.x > 0)
         {
@@ -74,6 +72,5 @@ public class Enemy_AI : MonoBehaviour
             checkMotion = false;
         }
 
-        EnemyAnimation.SetBool("InMotion", checkMotion);
     }
 }
