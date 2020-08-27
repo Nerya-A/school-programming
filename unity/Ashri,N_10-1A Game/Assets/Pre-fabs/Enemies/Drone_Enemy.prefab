@@ -157,9 +157,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy_health: 1
-  transform_pos: {fileID: 0}
-  other: {fileID: 0}
-  Player: {fileID: 0}
+  transform_pos: {fileID: 6211470607454497981, guid: 074a65d1d06132746b451b081dafc779,
+    type: 3}
 --- !u!1 &426261253893189141
 GameObject:
   m_ObjectHideFlags: 0

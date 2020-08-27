@@ -20,8 +20,8 @@ public class Enemy_AI : MonoBehaviour
         cld = GetComponent<Collider2D>();
         rb = GetComponent<Rigidbody2D>();
         facing_left = true;
-        left_max = transform.position.x - 8f;
-        right_max = transform.position.x + 8f;
+        left_max = transform.position.x - 6f;
+        right_max = transform.position.x + 6f;
         // remove to make custom patrols (need to public left & right max
         enemy_speed = 6f;
         EnemyAnimation = gameObject.GetComponent<Animator>();
