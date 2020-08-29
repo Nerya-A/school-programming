@@ -74,6 +74,6 @@ public class Enemy_AI : MonoBehaviour
             checkMotion = false;
         }
 
-        EnemyAnimation.SetBool("InMotion", checkMotion);
+//        EnemyAnimation.SetBool("InMotion", checkMotion);
     }
 }

@@ -21,7 +21,7 @@ public class Health : MonoBehaviour
     void FixedUpdate()
     {
         if(health<=0){
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene("Level_1");
         }
         Health_Text.text = health.ToString();
     }

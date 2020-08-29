@@ -12,7 +12,7 @@ public class Enemy_AI_2 : MonoBehaviour
     //movement components
     private Collider2D cld;
     private Rigidbody2D rb;
-    private bool checkMotion;
+//    private bool checkMotion;
 
     void Start()
     {
@@ -23,7 +23,7 @@ public class Enemy_AI_2 : MonoBehaviour
         right_max = transform.position.x + 8f;
         // remove to make custom patrols (need to public left & right max
         enemy_speed = 6f;
-        checkMotion = false;
+    //    checkMotion = false;
 
 
     }
@@ -63,14 +63,14 @@ public class Enemy_AI_2 : MonoBehaviour
             }
         }
 
-        if (rb.velocity.x > 0)
-        {
-            checkMotion = true;
-        }
-        else
-        {
-            checkMotion = false;
-        }
+    //    if (rb.velocity.x > 0)
+      //  {
+        //    checkMotion = true;
+       // }
+       // else
+       // {
+       //     checkMotion = false;
+      //  }
 
     }
 }

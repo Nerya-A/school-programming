@@ -25,11 +25,11 @@ public class Enemy_Health : MonoBehaviour
         if(Enemy_health<=0) {
             Destroy(this.gameObject);
         }
-        EnemyHPAnimator.SetFloat("health", Enemy_health);
+//        EnemyHPAnimator.SetFloat("health", Enemy_health);
     }
 
     void OnCollisionEnter2D(Collision2D other) {
-            if(other.gameObject.tag == "Character" && transform_pos.position.y - 3f > this.transform.position.y)
+            if(other.gameObject.tag == "Character" && transform_pos.position.y - 2.5f > this.transform.position.y)
         {
                 Enemy_health -= 1 ;
                 Debug.Log("Enemy: " + Enemy_health);

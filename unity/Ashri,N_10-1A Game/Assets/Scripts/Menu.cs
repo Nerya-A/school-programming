@@ -24,7 +24,7 @@ public class Menu : MonoBehaviour
 
     void StartGame() 
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Level_1");
     }
     
 //    void SelectLevel()

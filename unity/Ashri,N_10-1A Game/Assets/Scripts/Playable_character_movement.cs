@@ -12,6 +12,7 @@ public float motion;
 private Rigidbody2D rigidBody;
 private Vector2 startpos; 
 public LayerMask groundLayer;
+public Text thing;
 private PolygonCollider2D PolyCollider;
 private Health health;
 private const float INITIAL_SPEED = 20f;
@@ -52,7 +53,7 @@ public Text JumpText;
             transform.localScale = new Vector2(8.625046f, 9.756044f);
             }
             if(PlayerGround() && Input.GetButtonDown("Jump")) {
-                rigidBody.velocity = new Vector2(rigidBody.velocity.x,Mathf.Abs(motion/2)*jump_speed+10f);
+                rigidBody.velocity = new Vector2(rigidBody.velocity.x,Mathf.Abs(motion/5)*jump_speed+16f);
                 speed -= 4.0f;
         }
             if(speed <= 0) {
@@ -62,6 +63,7 @@ public Text JumpText;
         playerAnimation.SetFloat("Movemnt", Mathf.Abs(rigidBody.velocity.x));
         playerAnimation.SetBool("OnGround", PlayerGround());
         playerAnimation.SetFloat("Speed2", speed);
+        thing.text = " "+ this.transform.position.y +"";
     }
         //void OnTriggerEnter2D(Collider2D Tilemap) {
           //  speed -= 2.0f;
