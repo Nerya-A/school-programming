@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Playable_character_movement : MonoBehaviour {
 
@@ -12,7 +13,7 @@ public float motion;
 private Rigidbody2D rigidBody;
 private Vector2 startpos; 
 public LayerMask groundLayer;
-public Text thing;
+//public Text thing;
 private PolygonCollider2D PolyCollider;
 private Health health;
 private const float INITIAL_SPEED = 20f;
@@ -29,7 +30,7 @@ public Text JumpText;
      speed = INITIAL_SPEED;
      motion = 0f;
      jump_speed = 50f;   
-     startpos = this.transform.position;
+     //startpos = this.transform.position;
      PolyCollider = transform.GetComponent<PolygonCollider2D>();
      playerAnimation = GetComponent<Animator>();
     }
@@ -57,13 +58,16 @@ public Text JumpText;
                 speed -= 4.0f;
         }
             if(speed <= 0) {
-                this.transform.position = startpos;
-                speed = INITIAL_SPEED;
-            }
+            Scene this_Scene = SceneManager.GetActiveScene();
+            int Lvl_num = this_Scene.buildIndex;
+            SceneManager.LoadScene(Lvl_num);
+            //this.transform.position = startpos;
+            //speed = INITIAL_SPEED;
+        }
         playerAnimation.SetFloat("Movemnt", Mathf.Abs(rigidBody.velocity.x));
         playerAnimation.SetBool("OnGround", PlayerGround());
         playerAnimation.SetFloat("Speed2", speed);
-        thing.text = " "+ this.transform.position.y +"";
+//        thing.text = " "+ this.transform.position.y +"";
     }
         //void OnTriggerEnter2D(Collider2D Tilemap) {
           //  speed -= 2.0f;

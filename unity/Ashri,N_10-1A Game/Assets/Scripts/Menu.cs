@@ -27,8 +27,8 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene("Level_1");
     }
     
-//    void SelectLevel()
-//    {
-//        SceneManagement.LoadScene(2);
-//    }
+    void SelectLevel()
+    {
+        SceneManager.LoadScene("Test_Area");
+    }
 }
