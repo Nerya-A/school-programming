@@ -21,6 +21,8 @@ private Animator playerAnimation;
 //private enum State {idle, running, jumping, falling};
 //private State state = State.idle; 
 public Text JumpText;
+    private bool Iscrouched;
+    private float crouchCheck;
 
 
     void Start()
@@ -29,10 +31,11 @@ public Text JumpText;
      rigidBody = GetComponent<Rigidbody2D>();
      speed = INITIAL_SPEED;
      motion = 0f;
-     jump_speed = 50f;   
+     jump_speed = 25f;   
      //startpos = this.transform.position;
      PolyCollider = transform.GetComponent<PolygonCollider2D>();
      playerAnimation = GetComponent<Animator>();
+        Iscrouched = false;
     }
 
     
@@ -40,6 +43,7 @@ public Text JumpText;
     {
         JumpText.text = speed.ToString();
         motion = Input.GetAxis("Horizontal");
+        crouchCheck = Input.GetAxis("Vertical");
         //Debug.Log("speed:" + speed);
         if(motion<0f) {
             //Debug.Log("motion left");
@@ -54,8 +58,8 @@ public Text JumpText;
             transform.localScale = new Vector2(8.625046f, 9.756044f);
             }
             if(PlayerGround() && Input.GetButtonDown("Jump")) {
-                rigidBody.velocity = new Vector2(rigidBody.velocity.x,Mathf.Abs(motion/5)*jump_speed+16f);
-                speed -= 4.0f;
+                rigidBody.velocity = new Vector2(rigidBody.velocity.x,jump_speed + Mathf.Abs(motion / 5));
+                speed -= 2.0f;
         }
             if(speed <= 0) {
             Scene this_Scene = SceneManager.GetActiveScene();
@@ -64,9 +68,19 @@ public Text JumpText;
             //this.transform.position = startpos;
             //speed = INITIAL_SPEED;
         }
+            if(crouchCheck <0f)
+        {
+            Iscrouched = true;
+        }
+        else
+        { 
+            Iscrouched = false;
+        }
+
         playerAnimation.SetFloat("Movemnt", Mathf.Abs(rigidBody.velocity.x));
         playerAnimation.SetBool("OnGround", PlayerGround());
         playerAnimation.SetFloat("Speed2", speed);
+        playerAnimation.SetBool("downpress", Iscrouched);
 //        thing.text = " "+ this.transform.position.y +"";
     }
         //void OnTriggerEnter2D(Collider2D Tilemap) {
