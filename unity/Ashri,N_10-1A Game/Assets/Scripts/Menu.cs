@@ -29,6 +29,6 @@ public class Menu : MonoBehaviour
     
     void SelectLevel()
     {
-        SceneManager.LoadScene("Test_Area");
+        SceneManager.LoadScene("Tutorial_Level");
     }
 }

@@ -89,7 +89,7 @@ public Text JumpText;
         private bool PlayerGround() {
             RaycastHit2D raycastHit2D = Physics2D.BoxCast(PolyCollider.bounds.center, PolyCollider.bounds.size, 0f, Vector2.down, .1f, groundLayer);
                          
-             Debug.Log("Raycast");
+            // Debug.Log("Raycast");
              return raycastHit2D.collider != null;
            }
         void OnCollisionEnter2D(Collision2D other) {
