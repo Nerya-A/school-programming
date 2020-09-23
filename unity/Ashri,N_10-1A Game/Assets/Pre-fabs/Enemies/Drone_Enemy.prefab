@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2507692086721393166}
   - component: {fileID: 2507692086721393167}
   - component: {fileID: 2507692086721393168}
+  - component: {fileID: 3963565026971420913}
   m_Layer: 0
   m_Name: Drone_Enemy
   m_TagString: Enemy
@@ -158,6 +159,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transform_pos: {fileID: 6211470607454497981, guid: 074a65d1d06132746b451b081dafc779,
     type: 3}
+--- !u!58 &3963565026971420913
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2507692086721393169}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 78bcd58f6ae61dd4eb97a5249a2e4fe0, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.20357466
 --- !u!1 &2507692086762013543
 GameObject:
   m_ObjectHideFlags: 0

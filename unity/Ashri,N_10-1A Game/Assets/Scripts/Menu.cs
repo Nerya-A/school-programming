@@ -8,13 +8,13 @@ public class Menu : MonoBehaviour
 {
     public Button startButton;
     public Button quitButton;
-    public Button levelSelectButton;
+    public Button tutorialButton;
 
     void Start()
     {
         startButton.onClick.AddListener(StartGame);
         quitButton.onClick.AddListener(QuitGame);
-//        levelSelectButton.AddListener(SelectLevel);    
+        tutorialButton.onClick.AddListener(SelectLevel);    
     }
 
     void QuitGame() 

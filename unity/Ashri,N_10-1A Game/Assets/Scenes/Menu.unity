@@ -424,7 +424,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -267, y: 113}
+  m_AnchoredPosition: {x: -309.3, y: 134.4}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &830763785
@@ -517,6 +517,7 @@ GameObject:
   - component: {fileID: 877429437}
   - component: {fileID: 877429436}
   - component: {fileID: 877429435}
+  - component: {fileID: 877429438}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -572,6 +573,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &877429438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 877429434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c2e3544666a874594eb9e3ed4e342b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startButton: {fileID: 106402715}
+  quitButton: {fileID: 830763785}
+  tutorialButton: {fileID: 2029677969}
 --- !u!1 &1069628553
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,8 +702,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -178.54999, y: 0}
-  m_SizeDelta: {x: 357.1, y: 279}
+  m_AnchoredPosition: {x: -208.9, y: -5}
+  m_SizeDelta: {x: 417.8, y: 376.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1132279033
 MonoBehaviour:
@@ -774,7 +790,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -840,7 +856,6 @@ GameObject:
   - component: {fileID: 1457272936}
   - component: {fileID: 1457272935}
   - component: {fileID: 1457272934}
-  - component: {fileID: 1457272937}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -912,21 +927,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1457272937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1457272933}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c2e3544666a874594eb9e3ed4e342b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startButton: {fileID: 106402715}
-  quitButton: {fileID: 830763785}
-  levelSelectButton: {fileID: 0}
 --- !u!1 &1911478768
 GameObject:
   m_ObjectHideFlags: 0
@@ -961,7 +961,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 71.9, y: 66.2}
+  m_AnchoredPosition: {x: 30, y: 76}
   m_SizeDelta: {x: 243.34, y: 30.84}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1911478770
@@ -986,10 +986,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 26
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -997,7 +997,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Minority Run
+  m_Text: Cityscape Escape
 --- !u!222 &1911478771
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1042,7 +1042,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.700012, y: -46.799995}
+  m_AnchoredPosition: {x: 10.700012, y: -53.7}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2029677969
@@ -1158,8 +1158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 357, y: 0}
-  m_SizeDelta: {x: 357.1, y: 279}
+  m_AnchoredPosition: {x: 397.4, y: 1.075}
+  m_SizeDelta: {x: 428.3, y: 378.85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2093185364
 MonoBehaviour:
